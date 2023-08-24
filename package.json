@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon ./src/index.js",
-    "start": "node ./src/index.js"
+    "start": "node ./src/index.js",
+    "start-silently": "forever start ./src/index.js",
+    "stop": "forever stop ./src/index.js"
   },
   "repository": {
     "type": "git",
