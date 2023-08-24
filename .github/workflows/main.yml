@@ -22,6 +22,6 @@ jobs:
       - name: Install project
         run: npm install
       - name: Build the project
-        run: npm run build --if-present
+        run: npm run dev
       - name: Run tests
         run: npm test
