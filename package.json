@@ -29,5 +29,8 @@
       "db/*"
     ],
     "delay": 2
+  },
+  "devDependencies": {
+    "prettier": "3.0.2"
   }
 }
