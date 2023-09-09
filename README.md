@@ -14,4 +14,17 @@ npm install
 npm run dev
 ```
 
-- View the docs from [here](http://localhost:4000/api-docs)
+- Start the development server in a background
+
+```bash
+npm run start-silently
+```
+
+- Stop the server (background process)
+
+```bash
+npm run stop
+```
+
+- APIs available by URL: 
+http://localhost:4000/api-docs
