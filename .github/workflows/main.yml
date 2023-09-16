@@ -2,13 +2,13 @@ name: Build App
 
 on:
   pull_request:
-    branches:
-      - 'renovate/**'
+    branches: [master]
     types: [opened, edited]
 
 jobs:
   #build_and_test_from_master:
   build_and_test_from_pr:
+    if: startsWith(github.head_ref, 'renovate/**')
     runs-on: ubuntu-latest
 
     steps:
