@@ -2,8 +2,10 @@ name: Build & Run API health checks
 
 on:
   pull_request:
-    branches: [master]
-    types: [opened, edited]
+    branches: 
+      - master
+    types: 
+      - opened
   push:
     branches:
       - 'renovate/**'
