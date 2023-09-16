@@ -4,6 +4,9 @@ on:
   pull_request:
     branches: [master]
     types: [opened, edited]
+  push:
+    branches:
+      - 'renovate/**'
 
 jobs:
   #build_and_test_from_master:
