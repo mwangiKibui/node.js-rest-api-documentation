@@ -12,7 +12,7 @@ on:
 jobs:
   #build_and_test_from_master:
   build_and_test_from_pr:
-    if: startsWith(github.head_ref, 'renovate/**')
+    if: contains(github.ref, 'renovate/**')
     runs-on: ubuntu-latest
 
     steps:
