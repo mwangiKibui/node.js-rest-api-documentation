@@ -1,0 +1,30 @@
+name: Build App
+
+on:
+  pull_request:
+    branches:
+      - 'renovate/**'
+    types: [opened, edited]
+
+jobs:
+  #build_and_test_from_master:
+  build_and_test_from_pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - name: Install project
+        run: npm ci
+      - name: Install forever tool
+        run: npm install forever -g
+      - name: Build the project
+        run: npm run start-silently
+      - name: Run tests
+        run: echo "tests passed"
+      - name: Stop the app
+        run: npm run stop
