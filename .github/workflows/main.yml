@@ -1,4 +1,4 @@
-name: Build App
+name: Build & Run API health checks
 
 on:
   pull_request:
@@ -8,7 +8,7 @@ on:
 jobs:
   #build_and_test_from_master:
   build_and_test_from_pr:
-    if: contains(github.ref, 'renovate/**')
+    if: contains(github.ref, 'refs/heads/renovate/')
     runs-on: ubuntu-latest
 
     steps:
