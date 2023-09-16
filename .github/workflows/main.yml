@@ -1,13 +1,14 @@
 name: Build App
 
 on:
-  push:
-    branches: [master]
   pull_request:
-    branches: [master]
+    branches:
+      - 'renovate/**'
+    types: [opened, edited]
 
 jobs:
-  build_and_test:
+  #build_and_test_from_master:
+  build_and_test_from_pr:
     runs-on: ubuntu-latest
 
     steps:
