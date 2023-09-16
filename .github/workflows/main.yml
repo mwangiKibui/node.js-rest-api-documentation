@@ -3,7 +3,12 @@ name: Build App
 on:
   pull_request:
     branches: [master]
-    types: [opened, edited]
+    types:
+      - opened
+  push:
+    branches:
+      - 'renovate/**'
+  
 
 jobs:
   #build_and_test_from_master:
