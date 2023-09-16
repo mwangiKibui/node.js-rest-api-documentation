@@ -9,7 +9,7 @@ on:
       - 'renovate/**'
 
 jobs:
-  #build_and_test_from_master:
+  #build_and_test_from_master :
   build_and_test_from_pr:
     if: contains(github.ref, 'refs/heads/renovate/')
     runs-on: ubuntu-latest
